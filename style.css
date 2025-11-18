@@ -63,25 +63,105 @@
 .deals-heading p{
     text-align: center;
 }
+/* card section  */
+.card-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(2,1fr);
+    gap: 28px;
+    margin-top: 120px;
+
+
+}
+.card{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+    color: white;
+    border-radius: 15px;
+}
 /* img style  */
 .bloom{
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("./assets/deal-bloom.png");
     background-size: cover;
-    
+    background-repeat: no-repeat;
+    background-image: center;
 }
 .ana{
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("./assets/deal-ana.png");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-image: center;
     
 }
 .zabo{
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("./assets/deal-zabo.png");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-image: center;
+    height: 100%;
+    grid-column:2/3;
+    grid-row: 1/3;
     
 }
-.cards{
-    height: 200px;
+.
+.card span{
+    text-decoration: underline;
 }
+.card h2{
+
+
+}
+
+/* newsletter-section */
+.newsletter-section{
+    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(./assets/news-letter-bg.png);
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 23px;
+}
+.newsletter-section h2{
+    color: white;
+}
+.submission-box{
+    display: flex;
+    /* width: 70%; */
+    width:70%; 
+    margin: 0 auto;
+}
+.submission-box input[type="email"] ::placeholder{
+    font-size: 16px;
+     color: rgba(0, 0, 0, 0.5);
+
+
+}
+
+
+.submission-box button{
+    background-color:#E95A08 ;
+    padding: 20px 50px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    border:none;
+}
+.submission-box input[type="email"] {
+    /* height: 50px;
+    width: 645px; */
+    width: 100%;
+    padding: 8px 20px;
+    outline: none;
+}
+
 
 @media screen and (max-width:576px){
     .flower-container{
@@ -108,4 +188,22 @@
     .list-item{
         margin-top: 16px;
     }
-}
+    .card-container{
+        grid-template-columns: repeat(1,1fr);
+        margin-top:46px;
+    }
+    .card{
+        height: 206px;
+    }
+        .zabo{
+            grid-column: auto;
+            grid-row: auto;
+        }
+        .submission-box button{
+            padding: 8px 20px;
+        }
+        .newsletter-section h2{
+            font-size: 20px;
+        }
+    }
+
