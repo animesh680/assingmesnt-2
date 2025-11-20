@@ -54,8 +54,28 @@
     position: relative;
 }
 /* navbar style */
-.nav-bar-div{
-    
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-link{
+    text-decoration: none;
+    font-weight: 500;
+    color: rgba(7, 4, 4, 0.25);
+    /* display: none; */
+
+}
+.nav-item{
+    list-style: none;
+    margin-right: 30px;
+}
+#home{
+    color: #252432;
+    font-weight:bold;
+}
+#baner-card{
+    color:#252432 ;
 }
 /*  */
 .des-img-title{
@@ -231,9 +251,74 @@
     padding: 8px 20px;
     outline: none;
 }
+/* footer style  */
+.footer-container{
+    display: flex;
+    flex-direction:row;
+    gap: 50px;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+.footer-left-container{
+    display: flex;
+    /* gap: 70px; */
+    /* margin-left: 70px; */
+
+}
+.footer-right-container{
+    display: flex;
+    /* flex-direction: column; */
+    /* gap: 70px; */
+    /* margin-left: 70px;/ */
+    /* margin-right: 70px; */
+
+}
+.footer-left{
+    gap: 50px;
+    margin-right: 70px;
+}
+.footer-right{
+    line-height: 30px;
+    gap: 50px;
+    margin-left: 70px;
+}
+.footer1-left p{
+    /* column-gap: 70px;row-gap: 20px; */
+    gap: 50px;
+    margin-left: 70px;
+    font-size: 10px;
+    line-height: 30px;
+}
+.footer1-right{
+    gap: 30px;
+    margin-left: 40px;
+}
+
+
 
 
 @media screen and (max-width:576px){
+
+    /* nav bar */ 
+    /* #home,#Shope,#About {
+        display: none;
+    } */        
+     .nav-link a{
+        display:none;
+     }
+     #baner-card{
+        display:inline; 
+     }
+
+    /* .des-img-title */
+    .des-img-title{
+        flex-direction: column-reverse;
+           gap: 10px;
+          margin-top:28px;
+    }
+    .img-right img{
+        width: 100%;
+    }
 
 
 
@@ -302,5 +387,25 @@
         .newsletter-section h2{
             font-size: 20px;
         }
+        /* footer section */
+        .footer-container{
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .footer-left-container{
+            flex-direction: column;
+            gap: 10px;
+        }
+        .footer-right-container{
+            flex-direction: column;
+            gap: 10px;
+        }
+        .footer1-right{
+            /* gap: 60px;
+             /* */
+             /* margin-left: 20px; */
+        }
     }
+
 
